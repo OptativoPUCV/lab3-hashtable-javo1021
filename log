@@ -60,3 +60,16 @@ Thu 07 Sep 2023 05:35:52 PM UTC:
  tests:  1|5
 total_score: 10/70
 3f8f76e
+Thu 07 Sep 2023 05:37:17 PM UTC: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:20: error: invalid initializer
+   52 |   Pair nuevoPair = createPair(key, value);
+      |                    ^~~~~~~~~~
+hashmap.c:53:16: error: invalid operands to binary == (have ‘Pair’ and ‘void *’)
+   53 |   if(nuevoPair == NULL){
+      |                ^~
+Compilation failed
+1e471d0

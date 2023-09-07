@@ -49,6 +49,10 @@ void insertMap(HashMap * map, char * key, void * value) {
     posicion = (posicion +1) % map->capacity;
   }
 
+  Pair nuevoPair = createPair(key, value);
+  if(nuevoPair == NULL){
+    return;
+  }
   
 }
 
