@@ -100,7 +100,18 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
+  
+  if(map == NULL || key == NULL) return NULL;
 
+  int posicion = hash(key, map->capacity);
+
+  while(map->buckets[posicion != NULL]{
+    if(map->buckets[posicion]-> key != NULL && es_equal(map->buckets[posicion]-key), key){
+      map-current = pisicion;
+      return map->buckets[posicion];
+    }
+  })
+  
 
     return NULL;
 }

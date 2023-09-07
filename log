@@ -105,3 +105,21 @@ Thu 07 Sep 2023 06:29:50 PM UTC:
  tests:  5|4
 total_score: 30/70
 37cb38b
+Thu 07 Sep 2023 06:33:17 PM UTC: 
+ hashmap.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:108:31: error: comparison between pointer and integer [-Werror]
+  108 |   while(map->buckets[posicion != NULL]{
+      |                               ^~
+hashmap.c:108:39: error: expected ‘)’ before ‘{’ token
+  108 |   while(map->buckets[posicion != NULL]{
+      |        ~                              ^
+      |                                       )
+hashmap.c:117:1: error: control reaches end of non-void function [-Werror=return-type]
+  117 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+6377caf
