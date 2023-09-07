@@ -256,3 +256,9 @@ hashmap.c:49:31: error: expected ‘;’ before ‘if’
       |       ~~                       
 Compilation failed
 68c1cdd
+Thu 07 Sep 2023 07:58:44 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|4
+total_score: 30/70
+e42e093
