@@ -46,16 +46,21 @@ void insertMap(HashMap * map, char * key, void * value) {
   int posicion = hash(key,map->capacity);
 
   while(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL){
-    posicion = (posicion +1) % map->capacity;
+      posicion = (posicion +1) % map->capacity;
+    
+  
+      if(map->buckets[posicion] != NULL && is_equal(map->buckets[posicion]->key,key)){
+        return;
+      }
   }
 
-  Pair *nuevoPair = createPair(key, value);
-  if(nuevoPair == NULL){
-    return;
+  map->buckets[posicion] = createPair(key, value);
+  
+  if(map->buckets[posicion] != NULL){
+    map->size++;
+    map->current = posicion;
+    
   }
-  map->buckets[posicion] = nuevoPair;
-  map->size++;
-  map->current = posicion;
 }
 
 void enlarge(HashMap * map) {

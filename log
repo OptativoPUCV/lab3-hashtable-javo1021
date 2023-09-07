@@ -99,3 +99,9 @@ Thu 07 Sep 2023 05:38:27 PM UTC:
  tests:  5|4
 total_score: 30/70
 ddc5cc6
+Thu 07 Sep 2023 06:29:50 PM UTC: 
+ hashmap.c | 13 +++++++++----
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+ tests:  5|4
+total_score: 30/70
+37cb38b
