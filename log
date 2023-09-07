@@ -213,3 +213,20 @@ hashmap.c:113:4: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 88a2679
+Thu 07 Sep 2023 06:34:13 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:109:48: error: too few arguments to function ‘is_equal’
+  109 |     if(map->buckets[posicion]-> key != NULL && is_equal(map->buckets[posicion]->key), key){
+      |                                                ^~~~~~~~
+hashmap.c:35:5: note: declared here
+   35 | int is_equal(void* key1, void* key2){
+      |     ^~~~~~~~
+hashmap.c:109:85: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  109 |     if(map->buckets[posicion]-> key != NULL && is_equal(map->buckets[posicion]->key), key){
+      |                                                                                     ^
+cc1: all warnings being treated as errors
+Compilation failed
+36394a9
