@@ -195,3 +195,21 @@ hashmap.c:113:4: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 5d9a1ce
+Thu 07 Sep 2023 06:33:55 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:109:48: error: implicit declaration of function ‘es_equal’; did you mean ‘is_equal’? [-Werror=implicit-function-declaration]
+  109 |     if(map->buckets[posicion]-> key != NULL && es_equal(map->buckets[posicion]->key), key){
+      |                                                ^~~~~~~~
+      |                                                is_equal
+hashmap.c:109:45: error: value computed is not used [-Werror=unused-value]
+  109 |     if(map->buckets[posicion]-> key != NULL && es_equal(map->buckets[posicion]->key), key){
+      |                                             ^~
+hashmap.c:113:4: error: expected statement before ‘)’ token
+  113 |   })
+      |    ^
+cc1: all warnings being treated as errors
+Compilation failed
+88a2679

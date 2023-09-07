@@ -106,8 +106,8 @@ Pair * searchMap(HashMap * map,  char * key) {
   int posicion = hash(key, map->capacity);
 
   while(map->buckets[posicion] != NULL){
-    if(map->buckets[posicion]-> key != NULL && es_equal(map->buckets[posicion]-key), key){
-      map-current = pisicion;
+    if(map->buckets[posicion]-> key != NULL && es_equal(map->buckets[posicion]->key), key){
+      map->current = posicion;
       return map->buckets[posicion];
     }
   })
