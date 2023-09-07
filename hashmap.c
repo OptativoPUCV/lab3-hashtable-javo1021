@@ -45,9 +45,10 @@ void insertMap(HashMap * map, char * key, void * value) {
   }
   int posicion = hash(key,map->capacity);
 
-  while(map->buckets[posicion] != NULL && map->buckets[posicion]->key == NULL){
+  while(map->buckets[posicion] != NULL && map->buckets[posicion]->key != NULL){
     posicion = (posicion +1) % map->capacity;
   }
+
   
 }
 
