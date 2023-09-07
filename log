@@ -93,3 +93,9 @@ hashmap.c:58:8: error: ‘HashMap’ {aka ‘struct HashMap’} has no member na
       |        current
 Compilation failed
 7427075
+Thu 07 Sep 2023 05:38:27 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  5|4
+total_score: 30/70
+ddc5cc6
