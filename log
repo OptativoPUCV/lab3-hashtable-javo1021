@@ -242,3 +242,17 @@ Thu 07 Sep 2023 07:44:29 PM UTC:
  tests:  8|3
 total_score: 40/70
 a11f290
+Thu 07 Sep 2023 07:58:37 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:49:31: error: expected ‘;’ before ‘if’
+   49 |       posicion = (posicion +1)
+      |                               ^
+      |                               ;
+......
+   52 |       if(map->buckets[posicion] != NULL && is_equal(map->buckets[posicion]->key,key)){
+      |       ~~                       
+Compilation failed
+68c1cdd
