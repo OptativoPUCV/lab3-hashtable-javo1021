@@ -73,3 +73,23 @@ hashmap.c:53:16: error: invalid operands to binary == (have ‘Pair’ and ‘vo
       |                ^~
 Compilation failed
 1e471d0
+Thu 07 Sep 2023 05:38:03 PM UTC: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:20: error: invalid initializer
+   52 |   Pair nuevoPair = createPair(key, value);
+      |                    ^~~~~~~~~~
+hashmap.c:53:16: error: invalid operands to binary == (have ‘Pair’ and ‘void *’)
+   53 |   if(nuevoPair == NULL){
+      |                ^~
+hashmap.c:56:28: error: incompatible types when assigning to type ‘Pair *’ from type ‘Pair’
+   56 |   map->buckets[posicion] = nuevoPair;
+      |                            ^~~~~~~~~
+hashmap.c:58:8: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘currentr’; did you mean ‘current’?
+   58 |   map->currentr = posicion;
+      |        ^~~~~~~~
+      |        current
+Compilation failed
+7427075
