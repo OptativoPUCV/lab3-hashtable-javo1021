@@ -43,7 +43,12 @@ void insertMap(HashMap * map, char * key, void * value) {
   if(map == NULL || key == NULL){
     return;
   }
+  int posicion = hash(key,map->capacity);
 
+  while(map->buckets[posicion] != NULL && map->buckets[posicion]->key == NULL){
+    posicion = (posicion +1) % map->capacity;
+  }
+  
 }
 
 void enlarge(HashMap * map) {
