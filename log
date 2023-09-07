@@ -164,3 +164,34 @@ hashmap.c:113:4: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 1292355
+Thu 07 Sep 2023 06:33:40 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:109:48: error: implicit declaration of function ‘es_equal’; did you mean ‘is_equal’? [-Werror=implicit-function-declaration]
+  109 |     if(map->buckets[posicion]-> key != NULL && es_equal(map->buckets[posicion]-key), key){
+      |                                                ^~~~~~~~
+      |                                                is_equal
+hashmap.c:109:79: error: invalid operands to binary - (have ‘Pair *’ and ‘char *’)
+  109 |     if(map->buckets[posicion]-> key != NULL && es_equal(map->buckets[posicion]-key), key){
+      |                                                         ~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                                     |
+      |                                                                     Pair *
+hashmap.c:109:84: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  109 |     if(map->buckets[posicion]-> key != NULL && es_equal(map->buckets[posicion]-key), key){
+      |                                                                                    ^
+hashmap.c:110:11: error: ‘current’ undeclared (first use in this function)
+  110 |       map-current = pisicion;
+      |           ^~~~~~~
+hashmap.c:110:11: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:110:21: error: ‘pisicion’ undeclared (first use in this function); did you mean ‘posicion’?
+  110 |       map-current = pisicion;
+      |                     ^~~~~~~~
+      |                     posicion
+hashmap.c:113:4: error: expected statement before ‘)’ token
+  113 |   })
+      |    ^
+cc1: all warnings being treated as errors
+Compilation failed
+5d9a1ce
