@@ -73,7 +73,13 @@ void enlarge(HashMap * map) {
 
   if(map->buckets == NULL) return;
 
-  
+  map->size = 0;
+
+  for(int i = 0; i < antiguaCap; i++){
+    if(antiguoBuc[i] && antiguoBuc[i]->key){
+      
+    }
+  }
 
   
 
