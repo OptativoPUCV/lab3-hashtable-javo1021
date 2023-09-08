@@ -274,3 +274,25 @@ Fri 08 Sep 2023 01:12:48 AM UTC:
  tests:  8|3
 total_score: 40/70
 969c643
+Fri 08 Sep 2023 01:14:34 AM UTC: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:98:13: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘buckts’; did you mean ‘buckets’?
+   98 |     if(map->buckts[posicion]->key == && is_equal(map->bucks[posicion]->kkeu,key)){
+      |             ^~~~~~
+      |             buckets
+hashmap.c:98:49: error: expected ‘)’ before ‘(’ token
+   98 |     if(map->buckts[posicion]->key == && is_equal(map->bucks[posicion]->kkeu,key)){
+      |       ~                                         ^
+      |                                                 )
+hashmap.c:99:12: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucks’; did you mean ‘buckets’?
+   99 |       map->bucks[posicion]->key = NULL;
+      |            ^~~~~
+      |            buckets
+hashmap.c:98:5: error: label ‘is_equal’ used but not defined
+   98 |     if(map->buckts[posicion]->key == && is_equal(map->bucks[posicion]->kkeu,key)){
+      |     ^~
+Compilation failed
+a6d92dc
