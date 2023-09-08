@@ -68,7 +68,7 @@ void enlarge(HashMap * map) {
   
   if(map == NULL) return;
 
-  Pair antiguoBuc = map->buckets;
+  Pair **antiguoBuc = map->buckets;
   int antiguaCap = map->capacity;
 
   if(map->buckets == NULL) return;
