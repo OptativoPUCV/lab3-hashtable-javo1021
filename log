@@ -480,3 +480,28 @@ Fri 08 Sep 2023 01:33:43 AM UTC:
  tests:  16|1
 total_score: 60/70
 7b9d5fa
+Fri 08 Sep 2023 01:43:04 AM UTC: 
+ hashmap.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:21: error: invalid initializer
+   71 |   Pair antiguoBuc = map->buckets;
+      |                     ^~~
+hashmap.c:74:6: error: ‘map_’ undeclared (first use in this function); did you mean ‘map’?
+   74 |   if(map_>buckets == NULL) return;
+      |      ^~~~
+      |      map
+hashmap.c:74:6: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:74:11: error: ‘buckets’ undeclared (first use in this function)
+   74 |   if(map_>buckets == NULL) return;
+      |           ^~~~~~~
+hashmap.c:72:7: error: unused variable ‘antiguaCap’ [-Werror=unused-variable]
+   72 |   int antiguaCap = map->capacity;
+      |       ^~~~~~~~~~
+hashmap.c:71:8: error: unused variable ‘antiguoBuc’ [-Werror=unused-variable]
+   71 |   Pair antiguoBuc = map->buckets;
+      |        ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f0b7fb9

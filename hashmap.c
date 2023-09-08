@@ -65,7 +65,17 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
+  
+  if(map == NULL) return;
 
+  Pair antiguoBuc = map->buckets;
+  int antiguaCap = map->capacity;
+
+  if(map_>buckets == NULL) return;
+
+  
+
+  
 
 }
 
