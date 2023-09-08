@@ -96,7 +96,8 @@ void eraseMap(HashMap * map,  char * key) {
 
   while(map->buckets[posicion] != NULL){
     if (map->buckets[posicion]->key != NULL && is_equal(map->buckets[posicion]->key, key)) {
-      map->buckets[posicion]->key = NULL;
+      Pair * pair=map->buckets[posicion];
+      pair->key = NULL;
       map->size--;
       return;
     }
