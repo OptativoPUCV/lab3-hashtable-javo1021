@@ -142,8 +142,8 @@ Pair * nextMap(HashMap * map) {
 
   for(int i = map->current ; i< map->capacity; i++){
     if(map->buckets[i] != NULL && map->buckets[i]->key != NULL){
-       map->curren = i;
-      return map->buckets
+       map->current = i;
+      return map->buckets;
     }
   }
 
