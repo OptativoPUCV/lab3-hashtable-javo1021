@@ -505,3 +505,20 @@ hashmap.c:71:8: error: unused variable ‘antiguoBuc’ [-Werror=unused-variable
 cc1: all warnings being treated as errors
 Compilation failed
 f0b7fb9
+Fri 08 Sep 2023 01:43:12 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:21: error: invalid initializer
+   71 |   Pair antiguoBuc = map->buckets;
+      |                     ^~~
+hashmap.c:72:7: error: unused variable ‘antiguaCap’ [-Werror=unused-variable]
+   72 |   int antiguaCap = map->capacity;
+      |       ^~~~~~~~~~
+hashmap.c:71:8: error: unused variable ‘antiguoBuc’ [-Werror=unused-variable]
+   71 |   Pair antiguoBuc = map->buckets;
+      |        ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+015c400
