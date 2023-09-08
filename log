@@ -324,3 +324,23 @@ hashmap.c:98:5: error: label ‘is_equal’ used but not defined
       |     ^~
 Compilation failed
 86b2a59
+Fri 08 Sep 2023 01:16:08 AM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:98:50: error: expected ‘)’ before ‘(’ token
+   98 |     if(map->buckets[posicion]->key == && is_equal(map->buckets[posicion]->key,key)){
+      |       ~                                          ^
+      |                                                  )
+hashmap.c:104:44: error: expected ‘;’ before ‘}’ token
+  104 |     posicion = (posicion+1) % map->capacity
+      |                                            ^
+      |                                            ;
+  105 |   }
+      |   ~                                         
+hashmap.c:98:5: error: label ‘is_equal’ used but not defined
+   98 |     if(map->buckets[posicion]->key == && is_equal(map->buckets[posicion]->key,key)){
+      |     ^~
+Compilation failed
+7a71e99
