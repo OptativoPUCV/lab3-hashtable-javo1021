@@ -77,7 +77,7 @@ void enlarge(HashMap * map) {
 
   for(int i = 0; i < antiguaCap; i++){
     if(antiguoBuc[i] && antiguoBuc[i]->key){
-      insertMap(map, antiguoBuc[i]->key, antiguoBuc[i]);
+      insertMap(map, antiguoBuc[i]->key, antiguoBuc[i]->value);
     }
   }
 
