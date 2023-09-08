@@ -71,6 +71,9 @@ void enlarge(HashMap * map) {
   Pair **antiguoBuc = map->buckets;
   int antiguaCap = map->capacity;
 
+  map->capacity *=2
+  map->buckets = (Pair **)calloc(map->capacity, sizeof(Pair *));
+  
   if(map->buckets == NULL) return;
 
   map->size = 0;
