@@ -138,6 +138,17 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
+  if(map == NULL) return NULL;
 
-    return NULL;
+  for(int i = map->current ; i< map->capacity; i++){
+    if(map->buckets[i] != NULL && map->buckets[i]->key != NULL){
+       map->curren = i;
+      return map->buckets
+    }
+  }
+
+
+
+  
+  return NULL;
 }

@@ -436,3 +436,24 @@ Fri 08 Sep 2023 01:27:17 AM UTC:
  tests:  13|2
 total_score: 50/70
 50b3c69
+Fri 08 Sep 2023 01:31:14 AM UTC: 
+ hashmap.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:145:13: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘curren’; did you mean ‘current’?
+  145 |        map->curren = i;
+      |             ^~~~~~
+      |             current
+hashmap.c:146:17: error: returning ‘Pair **’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  146 |       return map->buckets
+      |              ~~~^~~~~~~~~
+hashmap.c:146:26: error: expected ‘;’ before ‘}’ token
+  146 |       return map->buckets
+      |                          ^
+      |                          ;
+  147 |     }
+      |     ~                     
+cc1: all warnings being treated as errors
+Compilation failed
+7297106
