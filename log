@@ -400,3 +400,9 @@ hashmap.c:98:5: error: label ‘is_equal’ used but not defined
       |     ^~
 Compilation failed
 b7de357
+Fri 08 Sep 2023 01:17:39 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|2
+total_score: 50/70
+3211ff4
